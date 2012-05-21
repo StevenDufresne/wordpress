@@ -1,0 +1,99 @@
+/**
+ /*
+Theme name: Custom Theme for Berry Good .
+Theme URI: http://imm.edumedia.ca/
+Description: This theme is designed for Berry Good Farms (IM assignment).
+Author: Steve Dufresne/Thomas J Bradley
+Author URI: http://gotnone.com
+Version: 1.0.0
+Tags: Berries, Goodness, Deliciousness
+
+ */
+
+html {
+}
+
+body {
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+/*** clearfix ***/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+
+
+/* -------------------------------------- */
+
+
+h2, h3, h4 {
+  margin: 0.2em 0 0.8em 0;
+  padding: 0;
+
+  color: #562f18;
+  font-size: 1.875em;
+  line-height: 1;
+}
+h3{
+	font-size: 1.5em;
+}
+
+h4 {
+	font-size: 1.3em;
+
+}
+p {
+  margin: 0 0 1.5em;
+  padding: 0;
+}
+
+/**** SKIP LINKS ****/
+
+.skiplinks {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.skiplinks a,
+.skiplinks a:link,
+.skiplinks a:visited {
+	position: absolute;
+	left: -999em;
+}
+
+.skiplinks a:hover,
+.skiplinks a:focus,
+.skiplinks a:active {
+	padding: 0.5em 0.75em;
+	top: 0;
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+	left: 3em;
+}
+

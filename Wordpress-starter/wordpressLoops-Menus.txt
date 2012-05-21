@@ -1,0 +1,91 @@
+@@@@@@@@@@@		Wordpress Resources		@@@@@@@@@@@
+
+/*********** Get Pages **********/
+	
+	
+	
+	<?php
+	$files = get_pages(array(
+				'number' => 2,
+				'post_type' => 'page',
+				'post_status' => 'publish',
+				'include' => ''
+				));
+	?>
+	<?php echo $files[0]->post_title; ?>
+
+
+	
+	
+	
+/************ Get Posts ***************/
+
+
+	
+			/*** For Each Loop ***/
+			 
+			 <?php
+				$args = array( 'numberposts' => 4,'order'=> 'ASC', 'orderby' => 'post_date' );
+							$postslist = get_posts( $args );
+							foreach ($postslist as $post) :  setup_postdata($post); ?> 
+			<?php endforeach; ?>
+
+			
+			
+			
+			/ **** While Loop - with custom types **** /
+			
+			<?php $my_query = new WP_Query(array('post_type'=>'recipes',
+																'posts_per_page'=> 3,));
+										
+						 while ($my_query->have_posts()) : $my_query->the_post();
+						 $do_not_duplicate = $post->ID;
+						 $files = get_posts(array('post_type' => 'attachment',
+														'post_parent' => $post->ID));
+						 
+						 ?> 
+
+			<?php endwhile; ?>
+				 
+				 
+
+
+				 
+/ ************** Get Attachments *****************/
+
+
+	<?php
+		$files = get_posts(array(
+		'numberposts' => 11,
+		'post_type' => 'attachment',
+		'post_parent' => $post->ID
+		));
+	?>
+		<?php echo wp_get_attachment_url($files[0]->ID);?>
+
+		
+		
+		
+		
+/ ************** Menu / SideBar ******************/
+
+	<?php			
+			wp_nav_menu(array(
+			'theme_location' => 'main',
+			'container' => ' ',
+			'menu_class' => ' '
+			));
+
+		?>
+
+<?php dynamic_sidebar('promo1');?>
+
+
+
+
+/*************** Misc *****************************/
+
+
+<?php echo get_the_date('Y-m-d'); ?>
+ <?php wp_head();?>
+
