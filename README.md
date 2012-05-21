@@ -1,4 +1,4 @@
 wordpress
 =========
 
-A repository for wordpress resources (ie. starter, plug-ins)
+A repository for wordpress resources (ie. starter, plug-ins).
