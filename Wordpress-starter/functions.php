@@ -11,27 +11,27 @@ register_nav_menus(array(
 ));
 
 register_sidebars(1,array(
-	'name' => 'Promotions Widget #1',
-		'id'=> 'promo1',
+	'name' => 'Widget Name',
+		'id'=> 'widget_id',
 		'before_widget' => ' ',
 		'after_widget' => ' '
 ));
 
 
-//include 'widgets/promo1widget.php';
+//include 'widgets/widget_name.php';
 
 
 
 function create_post_type() {
-	register_post_type( 'recipes',
+	register_post_type( 'post_name',
 		array(
 			'labels' => array(
-				'name' => __( 'Recipes' ),
-				'singular_name' => __( 'Recipe' )
+				'name' => __( 'post_name - Plural' ),
+				'singular_name' => __( 'post_name - Singular' )
 			),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'recipes')
+			'rewrite' => array('slug' => 'lowercase_post_name')
 		)
 	);
 }
