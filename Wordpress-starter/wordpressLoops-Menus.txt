@@ -35,7 +35,7 @@
 			
 			/ **** While Loop - with custom types **** /
 			
-			<?php $my_query = new WP_Query(array('post_type'=>'recipes',
+			<?php $my_query = new WP_Query(array('post_type'=>'post_type_name',
 																'posts_per_page'=> 3,));
 										
 						 while ($my_query->have_posts()) : $my_query->the_post();
@@ -78,7 +78,7 @@
 
 		?>
 
-<?php dynamic_sidebar('promo1');?>
+<?php dynamic_sidebar('promo1');?> //activation for the sidebar is in the functions file.
 
 
 
