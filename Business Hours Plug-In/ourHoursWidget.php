@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Custom Inserts
+Plugin Name: Custom Inserts for business hours
 Plugin URI: http://defineinteractivedesign.com
 Description: Allows users to input customs fields.
 Author: Steve Dufresne
